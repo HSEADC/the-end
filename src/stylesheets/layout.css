@@ -16,9 +16,6 @@ body {
   position: fixed;
   top: 0;
   z-index: 10;
-  display: grid;
-  grid-template-columns: auto auto 1fr;
-  grid-template-rows: auto 74rem;
   width: 100%;
   border-bottom: 2px solid var(--color-black);
   background-color: var(--color-white);
@@ -30,8 +27,11 @@ body {
   letter-spacing: 0.02em;
   text-transform: uppercase;
 }
+.header__bar {
+  display: flex;
+  height: 74rem;
+}
 .header__ticker {
-  grid-column: 1 / -1;
   display: flex;
   gap: 24rem;
   padding: 8rem 40rem;
@@ -72,7 +72,7 @@ body {
   border-right: 2px solid var(--color-black);
 }
 .header__search {
-  justify-self: end;
+  margin-left: auto;
   border-left: 2px solid var(--color-black);
 }
 .nav__link:hover,
