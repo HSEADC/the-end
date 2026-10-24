@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="stylesheets/layout.css" />
     <title>Главная</title>
-
   </head>
   <body>
-    
     <header class="header">
       <p class="header__ticker">
         <span>Конец света откладывается</span>
@@ -17,19 +15,72 @@
         <span>Медиа о глобальных страхах</span>
       </p>
       <div class="header__bar">
-      <a class="header__logo" href="./">Катастрофа</a>
+        <a class="header__logo" href="./">катастрофа</a>
 
-      <nav class="header__nav" aria-label="Разделы">
-        <a href="#news" class="nav__link">Новости</a>
-        <a href="#topics" class="nav__link">Темы</a>
-        <a href="#interactives" class="nav__link">Интерактивы</a>
-        <a href="#tests" class="nav__link">Тесты</a>
-        <a href="#about" class="nav__link">О медиа</a>
-      </nav>
+        <nav class="header__nav" aria-label="Разделы">
+          <a href="#news" class="nav__link">Главная</a>
+          <a href="#topics" class="nav__link">Статья</a>
+          <a href="#interactives" class="nav__link">О нас</a>
+          <!-- <a href="#tests" class="nav__link">Тесты</a>
+          <a href="#about" class="nav__link">О медиа</a> -->
+        </nav>
 
-      <a class="header__search" href="#search" aria-label="Поиск">[ Поиск ]</a>
+        <!-- <a class="header__search" href="#search" aria-label="Поиск"
+          >[ Поиск ]</a
+        > -->
       </div>
     </header>
-  </body>
 
+    <!-- ________________Секция "Главная"________________ -->
+    <section class="main">
+      <div class="mainText">
+        <h1 class="mainTitle">ВСЁ, ЧЕГО МЫ БОИМСЯ, УЖЕ БЫЛО</h1>
+        <p class="mainComm">
+          А пока заполните данные <br />
+          и узнайте день вашей смерти :)
+        </p>
+      </div>
+      <div class="mainForm">
+        <div class="formField">
+          <form id="my-form">
+            <div class="form_field">
+              <input
+                class="form_input"
+                type="email"
+                id="email"
+                name="email"
+                data-fs-field
+                placeholder=""
+              />
+              <label class="form_label" for="email">Ваш e-mail*</label>
+              <span data-fs-error="email"></span>
+            </div>
+            <div class="form_field">
+              <input
+                class="form_input"
+                type="text"
+                id="messege"
+                name="messege"
+                data-fs-field
+                placeholder=""
+              />
+              <label class="form_label" for="messege">Ваш комментарий</label>
+              <span data-fs-error="messege"></span>
+            </div>
+
+            <button class="form_button button" type="submit" data-fs-submit-btn>
+              Отправить
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="mainInteractive">
+        <p class="deathTimeText">таймер/ Индекс дня смерти</p>
+        <h1 class="numbers">XX</h1>
+        <button class="form_button buttonTime" type="submit" data-fs-submit-btn>
+          Узнать день смерти
+        </button>
+      </div>
+    </section>
+  </body>
 </html>

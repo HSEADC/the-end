@@ -5,24 +5,27 @@ html {
   font-size: calc(1vw / 14.4);
 }
 body {
+  height: 100vw;
   margin: 0;
+  position: relative;
 }
 :root {
   --color-black: #000;
   --color-white: #fff;
-  --color-green: #43D704;
+  --color-green: #43d704;
+  --color-grey: #8c8c8c;
 }
 .header {
-  position: fixed;
+  position: relative;
   top: 0;
   z-index: 10;
   width: 100%;
-  border-bottom: 2px solid var(--color-black);
+  /* border-bottom: 2px solid var(--color-black); */
   background-color: var(--color-white);
   color: var(--color-black);
   font-family: 'IBM Plex Mono', monospace;
   font-size: 13rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.3;
   letter-spacing: 0.02em;
   text-transform: uppercase;
@@ -56,10 +59,11 @@ body {
 .header__logo {
   padding: 0 40rem;
   border-right: 2px solid var(--color-black);
-  font-family: 'Golos Text', Arial, Helvetica, sans-serif;
+  font-family: 'Menlo', Arial, Helvetica, sans-serif;
   font-size: 34rem;
-  font-weight: 900;
-  letter-spacing: -0.03em;
+  font-weight: 700;
+  letter-spacing: -0.03rem;
+  text-transform: lowercase;
 }
 .header__nav {
   display: flex;
@@ -86,3 +90,167 @@ body {
   outline-offset: -8rem;
 }
 
+/* ________________Секция "Главная"________________ */
+.main {
+  width: 96vw;
+  height: 54vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: var(--color-black);
+  border-radius: 15px;
+}
+.mainText {
+  width: 64vw;
+  height: 30vw;
+}
+.mainTitle {
+  font-family: 'Menlo';
+  font-size: 105rem;
+  color: var(--color-white);
+  word-spacing: -3vw;
+  line-height: 6.5vw;
+  padding: 2vw 0vw 0vw 2vw;
+}
+.mainComm {
+  font-family: 'GolosText';
+  font-size: 22rem;
+  color: var(--color-white);
+  font-weight: 500;
+  margin: 1.5vw 0vw 0vw 2.5vw;
+  width: 25vw;
+  line-height: 2.3vw;
+}
+.mainForm form {
+  height: 23vw;
+  width: 37vw;
+  padding-left: 2.5vw;
+  padding-top: 3vw;
+  display: flex;
+  flex-direction: column;
+  gap: 12rem;
+}
+.form_field {
+  position: relative;
+  width: 100%;
+  height: 5.4vw;
+  border: solid 0.2vw;
+  border-color: var(--color-white);
+}
+.form_field:focus-within:after {
+  transform: opacity(0);
+}
+.form_input {
+  display: block;
+  width: 100%;
+  padding: 1.5vw 2vw 1.5vw;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-family: 'GolosText';
+  font-size: 25rem;
+  color: var(--color-white);
+  font-weight: 500;
+}
+.form_label {
+  position: absolute;
+  top: 23rem;
+  left: 30rem;
+  color: var(--color-white);
+  font-family: 'IMBPlexMono';
+  font-size: 25rem;
+  text-transform: uppercase;
+  pointer-events: none;
+  transition: color 0.2s ease;
+}
+.form_input:focus + .form_label,
+.form_input:not(:placeholder-shown) + .form_label {
+  color: transparent;
+}
+.form_input:user-invalid {
+  border-bottom-color: #b3261e;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12rem;
+  padding: 20rem 36rem;
+  border: solid 0.2vw;
+  border-color: var(--color-green);
+  background-color: transparent;
+  font-family: 'IMBPlexMono';
+  font-size: 25rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-white);
+  cursor: pointer;
+  width: 34.5vw;
+  overflow: hidden;
+  isolation: isolate;
+  position: relative;
+}
+.button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(7, 219, 0, 0.3);
+  z-index: -1;
+}
+.mainInteractive {
+  height: 45vw;
+  width: 26vw;
+}
+.deathTimeText {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 26rem;
+  font-weight: 600;
+  color: var(--color-grey);
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding-top: 2vw;
+}
+.numbers {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 350rem;
+  font-weight: 600;
+  color: var(--color-white);
+  line-height: 0.7;
+  text-transform: uppercase;
+}
+.buttonTime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12rem;
+  padding: 14rem 23rem;
+  border: solid 0.2vw;
+  border-color: var(--color-white);
+  background-color: transparent;
+  font-family: 'IMBPlexMono';
+  font-size: 14rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-white);
+  cursor: pointer;
+  width: 14.5vw;
+  overflow: hidden;
+  isolation: isolate;
+  position: relative;
+  margin-top: 3vw;
+}
+.buttonTime:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
