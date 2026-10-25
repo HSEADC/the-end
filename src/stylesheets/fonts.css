@@ -13,3 +13,8 @@
   src: url('../fonts/GolosText-Medium.woff');
   font-weight: 500;
 }
+@font-face {
+  font-family: 'GolosText';
+  src: url('../fonts/GolosText-Regular.woff');
+  font-weight: 400;
+}

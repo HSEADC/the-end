@@ -7,6 +7,15 @@
     opacity: 0;
   }
 }
+@keyframes greenRecBlink2 {
+  0%,
+  100% {
+    background-color: rgba(7, 219, 0, 1);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 1);
+  }
+}
 
 @keyframes greenRecMove {
   0% {
@@ -16,5 +25,54 @@
   100% {
     opacity: 1;
     width: 8.5vw;
+  }
+}
+@keyframes greenRecMove2 {
+  0% {
+    opacity: 1;
+    width: 0.5vw;
+  }
+  100% {
+    opacity: 1;
+    width: 27.5vw;
+  }
+}
+@keyframes greenRecMove3 {
+  0% {
+    opacity: 1;
+    width: 0.5vw;
+  }
+  100% {
+    opacity: 1;
+    width: 25.5vw;
+  }
+}
+@keyframes greenRecMove4 {
+  0% {
+    opacity: 1;
+    width: 0.5vw;
+  }
+  100% {
+    opacity: 1;
+    width: 38vw;
+  }
+}
+@keyframes greenRecMove5 {
+  0% {
+    opacity: 1;
+    width: 0.5vw;
+  }
+  100% {
+    opacity: 1;
+    width: 17vw;
+  }
+}
+
+@keyframes popOut {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
