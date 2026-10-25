@@ -4,19 +4,19 @@
 
 ## Ссылки
 
-- Сайт: [https://username.github.io/project]
+- Сайт: [https://hseadc.github.io/the-end/]
 - Макет в Figma: [(https://www.figma.com/design/RLyTG3nGPNqyWY0MirIckY/the-end-case?node-id=0-1&t=vuRGkbjNPrfoCYtJ-1)]
 
 ## Скриншоты
 
-![Главная, десктоп](src/images/home-desktop.png) ![Главная, мобильный](src/images/home-mobile.png)
+![Главная, десктоп](src/images/screen_1.png) ![Главная, мобильный](src/images/home-mobile.png)
 
 ## Команда
 
-| Участник | Что делал(а)                   |
-| -------- | ------------------------------ |
-| [Имя]    | [страницы, компоненты, задачи] |
-| [Имя]    | [страницы, компоненты, задачи] |
+| Участник  | Что делал(а)                   |
+| --------- | ------------------------------ |
+| [Валерия] | [страницы, компоненты, задачи] |
+| [Мария]   | [страницы, компоненты, задачи] |
 
 ## Стек
 

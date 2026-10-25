@@ -67,6 +67,26 @@
     width: 17vw;
   }
 }
+@keyframes greenRecMove6 {
+  0% {
+    opacity: 1;
+    width: 0.5vw;
+  }
+  100% {
+    opacity: 1;
+    width: 74vw;
+  }
+}
+@keyframes greenRecMove7 {
+  0% {
+    opacity: 1;
+    width: 0.5vw;
+  }
+  100% {
+    opacity: 1;
+    width: 54vw;
+  }
+}
 
 @keyframes popOut {
   0% {

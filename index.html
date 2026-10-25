@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="stylesheets/layout.css" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
     <link rel="icon" type="images/icon" href="/src/images/icon.svg" />
     <script src="index.js" defer></script>
     <title>Катастрофа</title>
@@ -23,7 +23,7 @@
         <nav class="header__nav" aria-label="Разделы">
           <a href="#main" class="nav__link">Главная</a>
           <a href="#article" class="nav__link">Статья</a>
-          <a href="#panel__title" class="nav__link">О нас</a>
+          <a href="#about__label" class="nav__link">О медиа</a>
           <!-- <a href="#tests" class="nav__link">Тесты</a>
           <a href="#about" class="nav__link">О медиа</a> -->
         </nav>
@@ -212,8 +212,44 @@
       <img src="src/images/scince.png" alt="" class="scince" />
     </section>
 
-    <!-- ________________Секция "О нас"________________  -->
+    <!-- _______________Секция "О проекте"_______________ -->
     <section class="about">
+      <p class="about__label" id="about__label">О медиа</p>
+
+      <h2 class="about__lead">
+        Исследовательское медиа о&nbsp;<mark>глобальных страхах</mark>
+        и&nbsp;их&nbsp;отражении в&nbsp;культуре
+      </h2>
+      <div class="greenRec_6"></div>
+
+      <ol class="about__parts">
+        <li class="about__part">
+          <span class="about__num">01</span>
+          <p class="about__word">угроза</p>
+          <p class="about__note">реальная или предполагаемая</p>
+        </li>
+        <li class="about__part">
+          <span class="about__num">02</span>
+          <p class="about__word">страх</p>
+          <p class="about__note">общественный</p>
+        </li>
+        <li class="about__part">
+          <span class="about__num">03</span>
+          <p class="about__word">образ</p>
+          <p class="about__note">культурный</p>
+        </li>
+      </ol>
+
+      <p class="about__outro">
+        Объект медиа — не&nbsp;буквально сам «конец света», а&nbsp;<strong
+          >отношения между угрозой, страхом и&nbsp;образом</strong
+        >
+        этой угрозы.
+      </p>
+    </section>
+
+    <!-- ________________Секция "О нас"________________  -->
+    <section class="aboutUs">
       <main id="main-panel" class="panel active">
         <h1 class="panel__title" id="panel__title">Выжившие :</h1>
         <ul class="authors">
@@ -274,5 +310,54 @@
         </div>
       </main>
     </section>
+
+    <!-- ________________Футер________________  -->
+
+    <footer class="footer">
+      <p class="footer__logo">катастрофа</p>
+      <div class="footer__top">
+        <nav class="footer__nav" aria-label="Разделы">
+          <p class="footer__label">Разделы</p>
+          <ul class="topics">
+            <li>
+              <a href="#main" aria-current="page">Главная</a>
+            </li>
+            <li><a href="#article">Статья</a></li>
+            <li><a href="#about__label">О медиа</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__contacts">
+          <p class="footer__label">Контакты</p>
+          <ul>
+            <li>
+              <a href="mailto:crusted.magnet-4w@icloud.com"
+                >crusted.magnet-4w@icloud.com</a
+              >
+            </li>
+            <li>
+              <a href="https://t.me/margoIII" target="_blank" rel="noopener">
+                Telegram ↗
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://t-j.ru/user6502851/#article"
+                target="_blank"
+                rel="noopener"
+              >
+                T-Journal ↗
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <small class="footer__copyright">© 2026 Катастрофа</small>
+        <a class="footer__up" href="#">Наверх ↑</a>
+      </div>
+    </footer>
+    <div class="greenRec_7"></div>
   </body>
 </html>

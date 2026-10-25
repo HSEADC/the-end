@@ -1,25 +1,50 @@
 @media (max-width: 768px) {
-  /* 1rem = 1px на экране шириной 390px */
   html {
     font-size: calc(1vw / 3.9);
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    height: auto;
+    overflow-x: hidden;
   }
 
-  .header {
-    flex-wrap: wrap;
+  .greenRec,
+  .greenRec_2,
+  .greenRec_3,
+  .greenRec_4,
+  .greenRec_5 {
+    display: none;
+  }
+
+  /* ________________ШАПКА________________ */
+  .header__ticker {
+    gap: 16rem;
+    padding: 8rem 12rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .header__ticker::-webkit-scrollbar {
+    display: none;
+  }
+  .header__ticker span {
+    flex-shrink: 0;
+  }
+  .header__ticker span + span::before {
+    margin-right: 16rem;
+  }
+
+  .header__bar {
+    flex-direction: column;
     height: auto;
-    padding: 16rem 12rem 0;
   }
   .header__logo {
-    width: 100%;
-    padding-bottom: 12rem;
-    font-size: 28rem;
-  }
-  .header__nav {
-    width: 100%;
-    margin-left: 0;
+    padding: 14rem 12rem;
+    border-right: 0;
+    border-bottom: 2px solid var(--color-black);
+    font-size: 30rem;
   }
   .nav__link {
-    flex-grow: 1;
+    flex: 1;
     justify-content: center;
     height: 44rem;
     padding: 0 8rem;
@@ -29,20 +54,389 @@
     border-right: 0;
   }
 
+  /* ________________ГЛАВНАЯ (чёрный блок)________________ */
+  .main {
+    position: relative;
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 12rem 12rem 0;
+    padding: 24rem 16rem 300rem; /* 300rem снизу — место под картинки */
+    border-radius: 16rem;
+    overflow: hidden;
+  }
+  .mainText {
+    width: 100%;
+    height: auto;
+  }
+  .mainTitle {
+    padding: 0;
+    font-size: 46rem;
+    line-height: 1.02;
+    word-spacing: -0.2em; /* в em — зависит от размера шрифта, а не от экрана */
+  }
+  .mainComm {
+    width: auto;
+    margin: 16rem 0 0;
+    font-size: 16rem;
+    line-height: 1.4;
+  }
+
+  /* Форма */
+  .mainForm form {
+    width: 100%;
+    height: auto;
+    margin-top: 24rem;
+    padding: 0;
+    gap: 10rem;
+  }
+  .form_field {
+    height: 52rem;
+    border-width: 2px; /* 0.2vw на телефоне было бы <1px */
+  }
+  .form_input {
+    height: 100%;
+    padding: 0 16rem;
+    border-radius: 0;
+    font-size: max(
+      16px,
+      16rem
+    ); /* меньше 16px iOS при фокусе приближает страницу */
+  }
+  .form_label {
+    top: 50%;
+    left: 16rem;
+    transform: translateY(-50%); /* подпись ровно по центру поля */
+    font-size: 16rem;
+  }
+
+  /* Кнопки .button (отправить, авторы, карточка): на всю ширину */
+  .button {
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    min-height: 48rem;
+    padding: 12rem 16rem;
+    border-width: 2px;
+    font-size: 14rem;
+    text-align: center;
+    white-space: normal;
+  }
+
+  /* Индикатор дня смерти */
+  .mainInteractive {
+    width: 100%;
+    height: auto;
+    margin-top: 32rem;
+  }
+  .deathTimeText {
+    padding: 0;
+    font-size: 14rem;
+  }
+  .numbers {
+    font-size: 200rem;
+  }
+  .buttonTime {
+    width: 100%;
+    margin-top: 16rem;
+    padding: 14rem 16rem;
+    border-width: 2px;
+  }
+
+  /* Картинки: прижимаем к низу блока, друг на друга (как на десктопе) */
+  .mainImg_1,
+  .mainImg_2,
+  .mainImg_3 {
+    top: auto;
+    bottom: 0;
+  }
+  .mainImg_1 {
+    width: 50%;
+    left: 25%;
+  }
+  .mainImg_2 {
+    width: 86%;
+    left: -6%;
+  }
+  .mainImg_3 {
+    width: 70%;
+    left: auto;
+    right: -8%;
+  }
+
+  /* ________________СТАТЬЯ________________ */
+  /* Секции идут друг под другом, а три картинки внизу — в один ряд.
+     Для этого .article делаем сеткой из 3 колонок. */
+  .article {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 8rem;
+    align-content: start;
+    width: auto;
+    height: auto;
+    margin: 8rem 0 0;
+    padding: 12rem 12rem 24rem;
+  }
+  .article > * {
+    grid-column: 1 / -1; /* по умолчанию любой блок занимает всю ширину */
+    min-width: 0;
+  }
+
+  /* Порядок блоков (картинки встают после «своего» текста) */
+  .firstScreen {
+    order: 0;
+  }
+  .articleMain,
+  .articleText,
+  .articleDescription {
+    order: 1;
+  }
+  .gaitiImg {
+    order: 2;
+  }
+  .articleMain_2,
+  .articleDescription_2 {
+    order: 3;
+  }
+  .zombie_1 {
+    order: 4;
+  }
+  .scince {
+    order: 5;
+  }
+  .zombie_2 {
+    order: 6;
+  }
+
+  /* Первый экран статьи (белая карточка) */
+  .firstScreen {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 20rem 16rem 220rem; /* 220rem снизу — место под картинки */
+    border-radius: 16rem;
+    overflow: hidden;
+  }
+  .articleTitle {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .zombie {
+    padding: 0;
+    font-size: 40rem;
+    line-height: 1.05;
+    word-spacing: -0.2em;
+  }
+  .articleQoute {
+    width: auto;
+    margin: 16rem 0 0;
+    font-size: 16rem;
+    line-height: 1.4;
+  }
+  .articleButton {
+    width: 100%;
+    margin: 16rem 0 0;
+    padding: 0; /* отступы переехали на ссылку внутри */
+    border-width: 2px;
+  }
+  .article__link {
+    display: block;
+    width: 100%;
+    padding: 14rem 16rem;
+    font-size: 14rem;
+    text-align: center;
+  }
+  .articleAuthors {
+    position: relative;
+    padding: 16rem 0 0;
+    font-size: 14rem;
+    z-index: 2;
+  }
+
+  .zombie_img,
+  .clem_img,
+  .brainz,
+  .lom {
+    top: auto;
+    bottom: 0;
+  }
+  .lom {
+    display: none;
+  }
+  .brainz {
+    left: 58vw;
+    top: 7vw;
+    z-index: 1;
+    width: 34%;
+  }
+  .clem_img {
+    left: 1vw;
+    top: 103vw;
+    z-index: 1;
+    width: 43%;
+  }
+  .zombie_img {
+    right: 0;
+    left: auto;
+    z-index: 2;
+    width: 50%;
+  }
+
+  /* Заголовки разделов */
+  .articleMain,
+  .articleMain_2 {
+    width: 100%;
+    height: auto;
+    padding: 20rem 0 12rem;
+    border-bottom-width: 2px;
+  }
+  .chapter,
+  .chapter_2 {
+    padding-left: 0;
+    font-size: 12rem;
+  }
+  .articleText {
+    width: 100%;
+    height: auto;
+  }
+  .zombieTitle {
+    padding: 16rem 0 0;
+    font-size: 12rem;
+    line-height: 1.4;
+  }
+
+  /* Описания */
+  .articleDescription,
+  .articleDescription_2 {
+    width: 100%;
+    height: auto;
+    padding: 0 0 20rem;
+  }
+  .articleDescription_2 {
+    padding-top: 16rem;
+  }
+  .factFearCulture {
+    flex-wrap: wrap; /* плашки переносятся, если не влезают */
+    gap: 8rem;
+    width: 100%;
+    height: auto;
+    padding: 16rem 0 0;
+  }
+  .fact,
+  .fear,
+  .culture {
+    width: auto;
+    height: 32rem;
+    padding: 0 12rem;
+  }
+  .factText,
+  .fearText,
+  .cultureText {
+    font-size: 12rem;
+  }
+  .titleGaiti,
+  .titleGaiti_2 {
+    width: 100%;
+    padding: 12rem 0 0;
+    font-size: 44rem;
+    line-height: 1.05;
+    word-spacing: -0.2em;
+  }
+  .gaiti,
+  .gaiti_2 {
+    width: 100%;
+    padding: 12rem 0 0;
+    font-size: 15rem;
+  }
+
+  .gaitiImg {
+    position: static;
+    width: 100%;
+    height: 220rem;
+    margin-top: 8rem;
+  }
+  .gaitiGreenImg {
+    top: 292.7vw;
+    left: 0;
+    width: 100%;
+    height: 11%;
+  }
+  .zombie_1,
+  .scince,
+  .zombie_2 {
+    position: static;
+    width: 100%;
+    height: 150rem;
+    margin-top: 16rem;
+    grid-column: auto;
+    z-index: 1;
+  }
+  .zombieGreen_1,
+  .zombieGreen_2 {
+    display: block;
+    top: 475vw;
+    z-index: 2;
+  }
+  .scince {
+    width: 143%;
+    height: 121%;
+    margin-left: -6vw;
+    margin-top: -3vw;
+  }
+  .zombie_1 {
+    margin-left: -4vw;
+    margin-top: 5vw;
+  }
+  .zombieGreen_1 {
+    left: -3.2vw;
+    top: 475.4vw;
+    height: 7.5%;
+    width: 30%;
+  }
+  .zombieGreen_2 {
+    left: 67.6vw;
+    top: 471vw;
+    height: 8.4%;
+    width: 28%;
+  }
+  .zombie_2 {
+    width: 85%;
+    height: 97%;
+    margin-top: 1vw;
+    margin-left: 6vw;
+  }
+
+  /* ________________О НАС________________ */
+  .aboutUs {
+    height: auto;
+    margin-top: 8rem;
+  }
   .panel {
+    width: auto;
+    height: auto;
     margin: 0 12rem 12rem;
-    padding: 24rem 16rem 48rem;
+    padding: 24rem 16rem 40rem;
     border-radius: 16rem;
   }
   .panel__title {
-    font-size: 56rem;
+    font-size: 44rem;
+    word-spacing: -0.2em;
   }
-
   .authors {
     flex-direction: column;
     align-items: center;
-    gap: 40rem;
-    margin-top: 32rem;
+    gap: 32rem;
+    margin-top: 28rem;
+  }
+  .author {
+    width: 100%;
+    max-width: 260rem;
+  }
+  .author__photo {
+    width: 160rem;
+    border-width: 3rem;
   }
 
   .panel--card {
@@ -54,8 +448,44 @@
   .id-card__actions {
     flex-direction: column;
     gap: 12rem;
+    margin-top: 16rem;
   }
-  .id-card__actions .button {
-    justify-content: center;
+}
+
+@media (max-width: 800px) {
+  .about {
+    padding-block: 80px;
+  }
+  .about__lead {
+    font-size: 22rem;
+  }
+  .about__parts {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 80px;
+  }
+  .about__word {
+    margin-top: 24px;
+    font-size: 22rem;
+  }
+  .about__note {
+    font-size: 15rem;
+  }
+  .about__outro {
+    margin-top: 80px;
+    font-size: 15rem;
+  }
+}
+
+/* __________________ФУТЕР__________________ */
+
+@media (min-width: 1440px) {
+  .footer__top,
+  .footer__logo {
+    padding: 0 80px;
+  }
+
+  .footer__logo {
+    font-size: 213px;
   }
 }
