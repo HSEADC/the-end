@@ -1,3 +1,4 @@
+/* ___________________Адаптив написан при помощи Claude Opus 5.5___________________  */
 @media (max-width: 768px) {
   html {
     font-size: calc(1vw / 3.9);
@@ -61,7 +62,7 @@
     width: auto;
     height: auto;
     margin: 12rem 12rem 0;
-    padding: 24rem 16rem 300rem; /* 300rem снизу — место под картинки */
+    padding: 24rem 16rem 300rem;
     border-radius: 16rem;
     overflow: hidden;
   }
@@ -73,7 +74,7 @@
     padding: 0;
     font-size: 46rem;
     line-height: 1.02;
-    word-spacing: -0.2em; /* в em — зависит от размера шрифта, а не от экрана */
+    word-spacing: -0.2em;
   }
   .mainComm {
     width: auto;
@@ -92,25 +93,21 @@
   }
   .form_field {
     height: 52rem;
-    border-width: 2px; /* 0.2vw на телефоне было бы <1px */
+    border-width: 2px;
   }
   .form_input {
     height: 100%;
     padding: 0 16rem;
     border-radius: 0;
-    font-size: max(
-      16px,
-      16rem
-    ); /* меньше 16px iOS при фокусе приближает страницу */
+    font-size: max(16px, 16rem);
   }
   .form_label {
     top: 50%;
     left: 16rem;
-    transform: translateY(-50%); /* подпись ровно по центру поля */
+    transform: translateY(-50%);
     font-size: 16rem;
   }
 
-  /* Кнопки .button (отправить, авторы, карточка): на всю ширину */
   .button {
     justify-content: center;
     width: 100%;
@@ -143,7 +140,6 @@
     border-width: 2px;
   }
 
-  /* Картинки: прижимаем к низу блока, друг на друга (как на десктопе) */
   .mainImg_1,
   .mainImg_2,
   .mainImg_3 {
@@ -165,8 +161,6 @@
   }
 
   /* ________________СТАТЬЯ________________ */
-  /* Секции идут друг под другом, а три картинки внизу — в один ряд.
-     Для этого .article делаем сеткой из 3 колонок. */
   .article {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -178,11 +172,10 @@
     padding: 12rem 12rem 24rem;
   }
   .article > * {
-    grid-column: 1 / -1; /* по умолчанию любой блок занимает всю ширину */
+    grid-column: 1 / -1;
     min-width: 0;
   }
 
-  /* Порядок блоков (картинки встают после «своего» текста) */
   .firstScreen {
     order: 0;
   }
@@ -208,13 +201,12 @@
     order: 6;
   }
 
-  /* Первый экран статьи (белая карточка) */
   .firstScreen {
     display: block;
     width: 100%;
     height: auto;
     margin: 0;
-    padding: 20rem 16rem 220rem; /* 220rem снизу — место под картинки */
+    padding: 20rem 16rem 220rem;
     border-radius: 16rem;
     overflow: hidden;
   }
@@ -238,7 +230,7 @@
   .articleButton {
     width: 100%;
     margin: 16rem 0 0;
-    padding: 0; /* отступы переехали на ссылку внутри */
+    padding: 0;
     border-width: 2px;
   }
   .article__link {
@@ -318,7 +310,7 @@
     padding-top: 16rem;
   }
   .factFearCulture {
-    flex-wrap: wrap; /* плашки переносятся, если не влезают */
+    flex-wrap: wrap;
     gap: 8rem;
     width: 100%;
     height: auto;
