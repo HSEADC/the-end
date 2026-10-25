@@ -356,7 +356,6 @@ header:hover .greenRec,
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  margin-top: 2vw;
   width: 99vw;
   height: 180vw;
   background-color: var(--color-black);
@@ -785,9 +784,9 @@ header:hover .greenRec,
   font-family: 'Menlo';
   font-size: 12rem;
   padding: 10vw 2.5vw;
-  border-top: solid 0.2vw;
   margin: 0 auto;
   width: 99vw;
+  margin-top: 2vw;
 }
 
 .about__label {
@@ -816,7 +815,7 @@ header:hover .greenRec,
   position: absolute;
   width: 0.5vw;
   height: 5vw;
-  top: 257.5vw;
+  top: 77.5vw;
   left: 1.8vw;
   background-color: var(--color-green);
   opacity: 0;
@@ -1009,8 +1008,8 @@ header:hover .greenRec,
 .greenRec_7 {
   position: absolute;
   width: 0.5vw;
-  height: 9vw;
-  top: 395.5vw;
+  height: 10vw;
+  top: 399.5vw;
   left: 37.5vw;
   background-color: var(--color-green);
   opacity: 0;

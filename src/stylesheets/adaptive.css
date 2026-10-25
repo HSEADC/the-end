@@ -479,13 +479,22 @@
 
 /* __________________ФУТЕР__________________ */
 
-@media (min-width: 1440px) {
-  .footer__top,
-  .footer__logo {
-    padding: 0 80px;
+@media (max-width: 800px) {
+  .footer__top {
+    flex-wrap: nowrap;
+    font-size: 13rem;
   }
 
   .footer__logo {
-    font-size: 213px;
+    font-size: 55rem;
+    padding: 0 4vw;
+  }
+
+  .footer__contacts {
+    margin-top: 8vw;
+  }
+
+  .footer__bottom {
+    padding: 10vw 2vw 5vw;
   }
 }
