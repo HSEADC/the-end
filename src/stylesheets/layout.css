@@ -3,6 +3,7 @@
 }
 html {
   font-size: calc(1vw / 14.4);
+  scroll-behavior: smooth;
 }
 body {
   height: 100vw;
@@ -56,6 +57,7 @@ body {
   color: inherit;
   text-decoration: none;
 }
+
 .header__logo {
   padding: 0 40rem;
   border-right: 2px solid var(--color-black);
@@ -65,6 +67,17 @@ body {
   letter-spacing: -0.03rem;
   text-transform: lowercase;
 }
+.greenRec {
+  position: absolute;
+  width: 8.5vw;
+  height: 2vw;
+  top: 3.8vw;
+  left: 8.5vw;
+  background-color: var(--color-green);
+  opacity: 1;
+  z-index: -1;
+}
+
 .header__nav {
   display: flex;
 }
@@ -74,6 +87,7 @@ body {
 }
 .nav__link {
   border-right: 2px solid var(--color-black);
+  transition: background-color 0.2s ease;
 }
 .header__search {
   margin-left: auto;
@@ -106,12 +120,14 @@ body {
   height: 30vw;
 }
 .mainTitle {
+  position: relative;
   font-family: 'Menlo';
   font-size: 105rem;
   color: var(--color-white);
   word-spacing: -3vw;
   line-height: 6.5vw;
   padding: 2vw 0vw 0vw 2vw;
+  z-index: 2;
 }
 .mainComm {
   font-family: 'GolosText';
@@ -137,6 +153,7 @@ body {
   height: 5.4vw;
   border: solid 0.2vw;
   border-color: var(--color-white);
+  z-index: 2;
 }
 .form_field:focus-within:after {
   transform: opacity(0);
@@ -146,7 +163,7 @@ body {
   width: 100%;
   padding: 1.5vw 2vw 1.5vw;
   border: none;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.3);
   outline: none;
   font-family: 'GolosText';
   font-size: 25rem;
@@ -178,7 +195,8 @@ body {
   gap: 12rem;
   padding: 20rem 36rem;
   border: solid 0.2vw;
-  border-color: var(--color-green);
+  border-color: var(--color-white);
+  transition: border-color 0.2s ease;
   background-color: transparent;
   font-family: 'IMBPlexMono';
   font-size: 25rem;
@@ -190,6 +208,10 @@ body {
   overflow: hidden;
   isolation: isolate;
   position: relative;
+  z-index: 2;
+}
+.button:hover {
+  border-color: var(--color-green);
 }
 .button:before {
   content: '';
@@ -198,8 +220,12 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(7, 219, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: background-color 0.2s ease;
   z-index: -1;
+}
+.button:hover:before {
+  background-color: rgba(7, 219, 0, 0.3);
 }
 .mainInteractive {
   height: 45vw;
@@ -231,6 +257,7 @@ body {
   padding: 14rem 23rem;
   border: solid 0.2vw;
   border-color: var(--color-white);
+  transition: border-color 0.2s ease;
   background-color: transparent;
   font-family: 'IMBPlexMono';
   font-size: 14rem;
@@ -243,6 +270,10 @@ body {
   isolation: isolate;
   position: relative;
   margin-top: 3vw;
+  z-index: 2;
+}
+.buttonTime:hover {
+  border-color: var(--color-green);
 }
 .buttonTime:before {
   content: '';
@@ -252,5 +283,113 @@ body {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.3);
+  transition: background-color 0.2s ease;
   z-index: -1;
+}
+.buttonTime:hover:before {
+  background-color: rgba(7, 219, 0, 0.3);
+}
+.mainImg_1,
+.mainImg_2,
+.mainImg_3 {
+  position: absolute;
+}
+.mainImg_1 {
+  width: 27%;
+  top: 22vw;
+  left: 42vw;
+  z-index: 2;
+}
+.mainImg_2 {
+  width: 45%;
+  top: 20.3vw;
+  left: 19vw;
+  z-index: 1;
+}
+.mainImg_3 {
+  width: 33%;
+  top: 31vw;
+  left: 65vw;
+  z-index: 1;
+}
+
+/* ________________Секция "Статья"________________ */
+
+.article {
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 2vw;
+  width: 99vw;
+  height: 135vw;
+  background-color: var(--color-black);
+}
+.firstScreen {
+  position: relative;
+  width: 96vw;
+  height: 54vw;
+  margin: 0 auto;
+  margin-top: 2vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: var(--color-white);
+  border-radius: 15px;
+}
+.articleTitle {
+  width: 57vw;
+  height: 36vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0vw;
+}
+.zombie {
+  font-family: 'Menlo';
+  font-size: 85rem;
+  line-height: 5.5vw;
+  word-spacing: -2vw;
+  padding-left: 2vw;
+  padding-top: 2vw;
+  color: var(--color-black);
+}
+.articleQoute {
+  font-family: 'GolosText';
+  font-size: 22rem;
+  color: var(--color-black);
+  font-weight: 500;
+  margin: 1.5vw 0vw 0vw 2.5vw;
+  width: 30vw;
+  line-height: 2.3vw;
+}
+.articleButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12rem;
+  padding: 14rem 23rem;
+  border: solid 0.2vw;
+  border-color: var(--color-black);
+  background-color: rgba(7, 219, 0, 1);
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+  background-color: transparent;
+  font-family: 'IMBPlexMono';
+  font-size: 14rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-black);
+  cursor: pointer;
+  width: 14.5vw;
+  overflow: hidden;
+  isolation: isolate;
+  position: relative;
+  margin-top: 3vw;
+  margin-left: 2.5vw;
+  z-index: 2;
+}
+.articleButton:hover {
+  border-color: var(--color-green);
+  background-color: rgba(7, 219, 0, 0.3);
 }
